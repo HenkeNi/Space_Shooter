@@ -1,0 +1,77 @@
+{
+  "directory": "Assets/Textures/",
+  "textures": [
+    {
+      "id": "Background_Color",
+      "path": "backgroundColor.png"
+    },
+    {
+      "id": "Background_Space",
+      "path": "Background_Space.png"
+    },
+    {
+      "id": "Nebula",
+      "path": "nebula.png"
+    },
+    {
+      "id": "Player",
+      "path": "player.png"
+    },
+    {
+      "id": "PlayerRight",
+      "path": "playerRight.png"
+    },
+    {
+      "id": "PlayerLeft",
+      "path": "playerLeft.png"
+    },
+    {
+      "id": "PlayerDamaged",
+      "path": "playerDamaged.png"
+    },
+    {
+      "id": "EnemyShip",
+      "path": "enemyShip.png"
+    },
+    {
+      "id": "EnemyUFO",
+      "path": "enemyUFO.png"
+    },
+    {
+      "id": "LaserRed",
+      "path": "laserRed.png"
+    },
+    {
+      "id": "LaserGreen",
+      "path": "laserGreen.png"
+    },
+    {
+      "id": "Space",
+      "path": "Space.png"
+    },
+    {
+      "id": "Ship",
+      "path": "Ship.png"
+    },
+    {
+      "id": "ExtraLife",
+      "path": "UI/playerLife1_red.png"
+    },
+    {
+      "id": "Powerup_Speed",
+      "path": "Power-ups/powerupRed_bolt.png"
+    },
+    {
+      "id": "Powerup_Shield",
+      "path": "Power-ups/powerupRed_shield.png"
+    },
+    {
+      "id": "Powerup_Health",
+      "path": "Power-ups/powerupRed_star.png"
+    },
+    {
+      "id": "Asteroid_Big_Brown",
+      "path": "Meteors/meteorBrown_big3.png"
+    }
+  ]
+}

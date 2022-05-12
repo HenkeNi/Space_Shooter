@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": 0,
+      "size": {
+        "width": 75.0,
+        "height": 75.0
+      },
+      "movement_speed": 20.5,
+      "max_health": 3,
+      "textures": [
+        {
+          "identifier": "EnemyShip"
+        }
+      ],
+      "weapons": [
+        {
+          "id": 3
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": {
+        "width": 75.0,
+        "height": 75.0
+      },
+      "movement_speed": 105.5,
+      "max_health": 1,
+      "textures": [
+        {
+          "identifier": "Player"
+        },
+        {
+          "identifier": "PlayerLeft"
+        },
+        {
+          "identifier": "PlayerRight"
+        }
+      ],
+      "weapons": [
+        {
+          "id": 0
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]      
+    },
+    {
+      "id": 2,
+      "size": {
+        "width": 75.0,
+        "height": 75.0
+      },
+      "movement_speed": 13.5,
+      "max_health": 2,
+      "textures": [
+        {
+          "identifier": "EnemyUFO"
+        }
+      ],
+      "weapons": [
+        {
+          "id": 0
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    }
+  ]
+}

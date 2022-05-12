@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{21743a88-ba78-4fa8-a3b0-a96d842c1a6c}</ProjectGuid>
+    <RootNamespace>SpaceShooter</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vector;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;src/pch;%(AdditionalIncludeDirectories);src/pch</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Space_Shooter\External\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;winmm.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-network-s-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vector;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;;src/pch</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Space_Shooter\External\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;winmm.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-network-s.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vector;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;src/pch;%(AdditionalIncludeDirectories);src/pch</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Space_Shooter\External\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;winmm.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-network-s-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vector;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;;src/pch</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Space_Shooter\External\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;winmm.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-network-s.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Quadtree\Quadtree.cpp" />
+    <ClCompile Include="Source\effects\Effects.cpp" />
+    <ClCompile Include="Source\systems\ParticleSystem.cpp" />
+    <ClCompile Include="Source\factories\ObstacleFactory.cpp" />
+    <ClCompile Include="Source\factories\GuiFactory.cpp" />
+    <ClCompile Include="Source\colliders\CollisionObject\CollisionObject.cpp" />
+    <ClCompile Include="Source\factories\ColliderFactory.cpp" />
+    <ClCompile Include="Source\colliders\LineCollider\LineCollider.cpp" />
+    <ClCompile Include="Source\colliders\CircleCollider\CircleCollider.cpp" />
+    <ClCompile Include="Source\colliders\BoxCollider\BoxCollider.cpp" />
+    <ClCompile Include="Source\entities\Asteroid.cpp" />
+    <ClCompile Include="Source\spawners\PickupSpawner.cpp" />
+    <ClCompile Include="Source\commands\Commands.cpp" />
+    <ClCompile Include="Source\spawners\EnemySpawner.cpp" />
+    <ClCompile Include="Source\input\InputMapper.cpp" />
+    <ClCompile Include="Source\factories\AgentFactory.cpp" />
+    <ClCompile Include="Source\entities\agents\Agent.cpp" />
+    <ClCompile Include="Source\managers\AudioManager.cpp" />
+    <ClCompile Include="Source\communication\events\Event.cpp" />
+    <ClCompile Include="Source\communication\dispatcher\Dispatcher.cpp" />
+    <ClCompile Include="Source\hud\HUD.cpp" />
+    <ClCompile Include="Source\spawners\BulletSpawner.cpp" />
+    <ClCompile Include="Source\managers\EntityManager.cpp" />
+    <ClCompile Include="Source\states\LevelSelectState.cpp" />
+    <ClCompile Include="Source\states\SettingsState.cpp" />
+    <ClCompile Include="Source\level\Level.cpp" />
+    <ClCompile Include="Source\managers\LevelManager.cpp" />
+    <ClCompile Include="Source\managers\CollisionManager.cpp" />
+    <ClCompile Include="Source\factories\PickupFactory.cpp" />
+    <ClCompile Include="Source\entities\Bullet.cpp" />
+    <ClCompile Include="Source\entities\agents\Boss.cpp" />
+    <ClCompile Include="Source\entities\Pickup.cpp" />
+    <ClCompile Include="Source\entities\Entity.cpp" />
+    <ClCompile Include="Source\entities\agents\Player.cpp" />
+    <ClCompile Include="Source\entities\agents\Enemy.cpp" />
+    <ClCompile Include="Source\factories\BulletFactory.cpp" />
+    <ClCompile Include="Source\gui\Image.cpp" />
+    <ClCompile Include="Source\gui\Button.cpp" />
+    <ClCompile Include="Source\gui\Label.cpp" />
+    <ClCompile Include="Source\states\GameOverState.cpp" />
+    <ClCompile Include="Source\states\PauseState.cpp" />
+    <ClCompile Include="Source\states\GameState.cpp" />
+    <ClCompile Include="Source\states\MenuState.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\pch\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\managers\StateManager.cpp" />
+    <ClCompile Include="Source\states\State.cpp" />
+    <ClCompile Include="Source\gui\Widget.cpp" />
+    <ClCompile Include="Source\states\TitleState.cpp" />
+    <ClCompile Include="Source\entities\Weapon.cpp" />
+    <ClCompile Include="Source\map\Tilemap.cpp" />
+    <ClCompile Include="Source\map\Tile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\BSTSet.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Quadtree\Quadtree.h" />
+    <ClInclude Include="External\CommonUtilities\Volumes\Volumes.hpp" />
+    <ClInclude Include="Source\effects\Effects.h" />
+    <ClInclude Include="External\CommonUtilities\Math\Matrices\Matrix3x3.hpp" />
+    <ClInclude Include="External\CommonUtilities\Math\Matrices\Matrix4x4.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\LineVolume.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\PlaneVolume.hpp" />
+    <ClInclude Include="Source\effects\Effect.h" />
+    <ClInclude Include="Source\enums\ePickupType.h" />
+    <ClInclude Include="Source\systems\ParticleSystem.h" />
+    <ClInclude Include="Source\factories\ObstacleFactory.h" />
+    <ClInclude Include="Source\factories\GuiFactory.h" />
+    <ClInclude Include="Source\communication\subscribers\InputSubscriber.h" />
+    <ClInclude Include="Source\enums\eInput.h" />
+    <ClInclude Include="Source\factories\ColliderFactory.h" />
+    <ClInclude Include="Source\colliders\LineCollider\LineCollider.h" />
+    <ClInclude Include="Source\colliders\CircleCollider\CircleCollider.h" />
+    <ClInclude Include="Source\colliders\BoxCollider\BoxCollider.h" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\VectorOnStack.hpp" />
+    <ClInclude Include="External\CommonUtilities\Utility\UtilityFunctions.hpp" />
+    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector.hpp" />
+    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector2.hpp" />
+    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector3.hpp" />
+    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector4.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\AABB2D.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\AABB3D.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\Circle.hpp" />
+    <ClInclude Include="External\CommonUtilities\Intersections\Intersection.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\Line.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\Plane.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\Ray.hpp" />
+    <ClInclude Include="External\CommonUtilities\Volumes\Sphere.hpp" />
+    <ClInclude Include="Source\colliders\CollisionObject\CollisionObject.h" />
+    <ClInclude Include="Source\entities\Asteroid.h" />
+    <ClInclude Include="Source\enums\eCollisionLayer.h" />
+    <ClInclude Include="Source\spawners\PickupSpawner.h" />
+    <ClInclude Include="Source\commands\Commands.h" />
+    <ClInclude Include="Source\commands\Command.h" />
+    <ClInclude Include="Source\spawners\EnemySpawner.h" />
+    <ClInclude Include="Source\input\InputMapper.h" />
+    <ClInclude Include="Source\factories\AgentFactory.h" />
+    <ClInclude Include="Source\entities\agents\Agent.h" />
+    <ClInclude Include="Source\managers\AudioManager.h" />
+    <ClInclude Include="Source\communication\events\Event.h" />
+    <ClInclude Include="Source\communication\dispatcher\Dispatcher.h" />
+    <ClInclude Include="Source\enums\eBulletType.h" />
+    <ClInclude Include="Source\enums\eAgentType.h" />
+    <ClInclude Include="Source\enums\eMoveDir.h" />
+    <ClInclude Include="Source\enums\eWeaponType.h" />
+    <ClInclude Include="Source\hud\HUD.h" />
+    <ClInclude Include="Source\enums\eEvent.h" />
+    <ClInclude Include="Source\spawners\BulletSpawner.h" />
+    <ClInclude Include="Source\managers\EntityManager.h" />
+    <ClInclude Include="Source\states\LevelSelectState.h" />
+    <ClInclude Include="Source\states\SettingsState.h" />
+    <ClInclude Include="Source\level\Level.h" />
+    <ClInclude Include="Source\managers\LevelManager.h" />
+    <ClInclude Include="Source\managers\CollisionManager.h" />
+    <ClInclude Include="Source\data\PickupData.h" />
+    <ClInclude Include="Source\factories\PickupFactory.h" />
+    <ClInclude Include="Source\fsm\BossState.h" />
+    <ClInclude Include="Source\entities\Bullet.h" />
+    <ClInclude Include="Source\entities\agents\Boss.h" />
+    <ClInclude Include="Source\entities\Pickup.h" />
+    <ClInclude Include="Source\entities\Entity.h" />
+    <ClInclude Include="Source\entities\agents\Player.h" />
+    <ClInclude Include="Source\managers\ResourceManager.hpp" />
+    <ClInclude Include="Source\entities\agents\Enemy.h" />
+    <ClInclude Include="Source\data\BulletData.h" />
+    <ClInclude Include="Source\data\AgentData.h" />
+    <ClInclude Include="Source\factories\BulletFactory.h" />
+    <ClInclude Include="Source\gui\Image.h" />
+    <ClInclude Include="Source\gui\Button.h" />
+    <ClInclude Include="Source\gui\Label.h" />
+    <ClInclude Include="Source\shared\SharedContext.h" />
+    <ClInclude Include="Source\states\GameOverState.h" />
+    <ClInclude Include="Source\states\PauseState.h" />
+    <ClInclude Include="Source\states\GameState.h" />
+    <ClInclude Include="Source\states\MenuState.h" />
+    <ClInclude Include="Source\Game.h" />
+    <ClInclude Include="Source\pch\pch.h" />
+    <ClInclude Include="Source\managers\StateManager.h" />
+    <ClInclude Include="Source\states\State.h" />
+    <ClInclude Include="Source\enums\eStateType.h" />
+    <ClInclude Include="Source\communication\subscribers\Subscriber.h" />
+    <ClInclude Include="Source\gui\Widget.h" />
+    <ClInclude Include="Source\states\TitleState.h" />
+    <ClInclude Include="Source\entities\Weapon.h" />
+    <ClInclude Include="Source\data\WeaponData.h" />
+    <ClInclude Include="Source\map\Tilemap.h" />
+    <ClInclude Include="Source\map\Tile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Json\Bullets.json" />
+    <None Include="Assets\Json\Agents.json" />
+    <None Include="Assets\Json\Interfaces.json" />
+    <None Include="Assets\Json\Levels.json" />
+    <None Include="Assets\Json\Pickups.json" />
+    <None Include="Assets\Json\Settings.json" />
+    <None Include="Assets\Json\Textures.json" />
+    <None Include="Assets\Json\Weapons.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Textures\backgroundColor.png" />
+    <Image Include="Assets\Textures\Background_Space.png" />
+    <Image Include="Assets\Textures\laserGreen.png" />
+    <Image Include="Assets\Textures\laserRed.png" />
+    <Image Include="Assets\Textures\nebula.png" />
+    <Image Include="Assets\Textures\player.png" />
+    <Image Include="Assets\Textures\playerDamaged.png" />
+    <Image Include="Assets\Textures\playerLeft.png" />
+    <Image Include="Assets\Textures\playerRight.png" />
+    <Image Include="Assets\Textures\shield.png" />
+    <Image Include="Assets\Textures\Ship.png" />
+    <Image Include="Assets\Textures\Space.png" />
+    <Image Include="Assets\Textures\starBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Source\Todo.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

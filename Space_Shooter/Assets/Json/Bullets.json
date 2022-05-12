@@ -1,0 +1,47 @@
+{
+  "bullets": [
+    {
+      "id": 0,
+      "description": "(Player) basic fire",
+      "size": {
+        "width": 3.0,
+        "height": 5.0
+      },
+      "speed": 500.0,
+      "damage": 2,
+      "texture": "LaserRed"
+    },
+    {
+      "id": 1,
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      },
+      "speed": 520.0,
+      "damage": 20,
+      "texture": "LaserRed"
+    },
+    {
+      "id": 2,
+      "size": {
+        "width": 3.0,
+        "height": 5.0
+      },
+      "speed": 504.0,
+      "damage": 2,
+      "texture": "LaserRed"
+    },
+    {
+      "id": 3,
+      "description": "(Enemy) basic fire",
+      "size": {
+        "width": 3.0,
+        "height": 5.0
+      },
+      "speed": 500.0,
+      "damage": 1, 
+      "texture": "LaserGreen"
+    }
+
+  ]
+}

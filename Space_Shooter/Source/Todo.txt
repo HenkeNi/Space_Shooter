@@ -1,0 +1,420 @@
+
+[TODO]
+	
+
+	COLLISIONS:
+		Fix by passing in the two colliding objects; check intersection (function) -> move a part objects by amount (check if still colliding?)
+
+		TRY RayCasting (cast beam -> dont go through enemies!)
+
+	
+[Multiple enemies]
+* wave?? 
+moves as a unit? 
+individuals can move to the side if a bullet is incoming?!
+
+
+[TIPS]
+	* Enemy bullets should move a lot slower than you would think
+	* Strong contrast against background
+	* Always be top-most layer (smallest on top)
+	* Player bullets -> quicker than you think
+	* lower contrast than enemy bullets
+	* Feedback when hitting enemy (shakes, flash, explosion)
+	Hitboxes:
+		* enemy => hitbox match model
+		* player => hitbox smaller
+		* player bullets => hitbox larger than bullet
+		* enemy bullet => hitbox smaller than bullet
+
+
+	
+
+
+	Dispatcher:
+		change from array to BTSSet?
+
+	Collision:
+		if collides -> debug box becomes red for x seconds..
+
+
+	Restart Level:
+		* Send notification??
+
+	CO-OP
+		* Two players?
+
+
+	Ship:
+		* contaisn multiple components?
+			* weapons, turrets, etc..
+		* can be upgraded?
+			* twin cannons...
+			* laser...
+
+	Fix Frame Rate..
+
+	Experience Points?
+		* Exp Bar
+		* When enemies dies/level complete? - need to catch them? 
+
+	Health bar? 
+
+	Play & level select:
+		* Reset Player...
+		* 
+
+
+	TextTag...
+		* Text popups (+5xp, LEVEL UP!, -2hp) - Video 21 Suraj Sharma, wingman
+
+	Vectors:
+		* replace soem with vector On stack..  (EntityManager, CollisionManager..)
+  
+
+	Bullet:
+		Has owner or owner type?
+
+	
+	highscore 
+		* completed all levels...
+
+	Pickups:
+		* effects..
+
+	GameOver:
+		* Restart...
+
+	Level:
+		* Next level...
+
+	Player:
+		* Collision with screen bounds (make platform class??)
+
+	Collider:
+		Takes parent/owner by reference (creates collider in init or constructor..) - no colliderfactory then..
+		
+	Transition:
+		* make screen black?
+
+	View scrolling
+
+	Particles 
+			* Explosion on death...
+
+	
+	Buttons:
+		Unclick??
+
+	GUI:
+		sort (order of rendering)
+
+	Parallax
+
+	Asteriod:
+		ObstacleFactory? -> BulletFactory creates asteriods (uses bulletdata)... BulletSpawner can spawn Asteriods..
+
+	Enemies:
+		* Fires bullets...
+		* waves
+		* flying/movement patterns...
+
+	Level:
+		* map that scrolls
+
+	Weapon:
+		* Enemy/Player shot direction (put in Weapon json??)
+
+	Player:
+		* can be hit/Killed..
+		* Activate shield
+
+
+	Bullets:
+		* Increase bullet damage
+		* Increase bullet speed
+
+
+	Collision:
+		*  Sprite flash on hit...
+
+
+	Velocity/Acceleration:
+		* currentVelocity -> maxVelocity... if (currentVelocity < maxVelocity) currentvelocity.x += acceleration * direction.x (same for y)
+	
+
+	Object Pool:
+		
+
+	Entity Manager
+		* removes all entities that are outside of...
+		* can remove specific entity
+	
+	Bullet patterns:
+		* call bullet spawner; ask to spawn a certain type of bullet pattern?
+
+	Dispatcher:
+		* unsubscribe when quiting...
+
+	StateManager:
+		* Rename statestack?
+		* fix sharedcontext -> dont let inherited states have access to satemanager
+	
+	Weapon
+		- Pass bullet type... (send bullet changed event...??)
+
+
+
+
+	UI Manager..
+		Keeps/Handles all Menus.. (ask to render/handle input for menu x...)
+
+
+Wave (contains enemies...) => renders, updates, deletes (gets from factory)
+
+
+
+
+
+CollisionManager => alla Entities har ett eCollisionLayer?
+CollisionManager lyssnar också på Spawner klasserna??
+
+
+
+Json Parser ? Class that reads from Json ..
+
+Every level has a score..?
+
+
+
+
+[Pickups/upgrades]
+* upgraded weapon is a wrapper (look up patterns where two classes inherits from same base class, one is weapon other is weaponWithFire!)
+
+
+
+
+
+
+[Window class]
+enum windowSizes: Stanradrd HD, FULLHD
+
+
+[Template factory]
+* using variadic template?
+
+
+[Handling Entities]
+* instead of Manager(s) that updates, renders, and removes entities => 
+
+
+
+
+
+[States]
+	LevelFinishedState
+
+[Collision Detection]
+	* Quadtree/Grid for filtering relevant collision checks... 
+
+
+
+
+
+[Factories]
+	* Gun Factory? -> Gives directions etc... (EnemyFactory has a reference to a GunFactory??)
+	* Entity Factory? => template function for Create()?
+	* reference to an entity manager in Factory?
+
+	* factory (bullet) subscried to player/eneny?? observer pattern?
+
+
+Renme WIdge -> GuiObject
+Renaem Entity -> GameObject??
+Rename Entity -> ISexpanded to IsDestoryed
+
+
+[Collision]
+* Collision type (enemies cant collide with other enemies/enemy bullets)
+
+
+[InputHandler]
+
+
+
+Make Template Factory...???
+
+
+Factories has a reference to Entity Manager???... adds Entity themself...??
+Bullet FActory observer to enemies and Player??
+
+
+[BulletSpawner]
+	Listener for Players shoot function?
+		problem: don't now which gun/bullet type, nor position
+
+
+[States]
+* Rename GameOverState => EndState?
+* Rename LevelSelectState => LevelState??
+
+HighscoreState
+
+
+Level
+	SpawnBoss();
+
+	members:
+	State (NotPlayed, Finished, Failed, Paused, Won, Exit)???
+	number of waves (or enemies)...
+
+	obstacles??
+
+
+ALl texts in same json array:
+	name used as key?!
+
+[Respawn ENemies]
+* Instead of removing out of bound/dead enemies
+-> give them new position (above screen) and call Reset Function
+-> before this; check if it should spawn more enemies, if not just remove it...?
+
+
+
+Divide screen into grid (only check part of the grid?!)
+
+
+
+
+Add PendingChangeList() stack/list of pushes, pops, etc...? 
+
+
+  Wave class??
+
+
+GameState
+	GameWorld?
+		Lvl(s)
+			SpawnPoint(s) (position, spawn_frequence, enemy type)
+		Player reference..
+	Player?
+	Managers/Factories
+
+
+
+Guided Missle
+	GuideTowards(const sf::Vector2f& aPosition)
+	{	
+		m_targetDirection = unitVector(aPosition - getWorldPosition()); // unitVector is a helper fucntion (divides vector by its length)
+	}
+
+
+class GuiStyle
+{
+	sf::Color bodyColor
+	sf::Color highlightColor
+	sf::Colro borderColer
+	sf::color borderhighlight color
+	sf.:Color textColor
+	sf.:Color texthighlightCOlor
+	sf::Font* aFont
+	float borderSize
+}
+
+JSON:
+
+GUI:
+{
+	"main_menu": 
+}
+
+
+Map for Interfaces/Abstract?
+
+
+
+
+
+
+float scrollSpeed
+
+ // UIManager => array of ui's, tell it to update/render index X...???
+TODO:
+
+Put all lables/images in same part of JSON... Fetch them all and store in a container...
+fetch from it in different states.. and draw
+
+add load from file...
+
+
+* Batch rendering or Sprite batch (you implement it by drawing properly-designed vertex array sfml/tutorial/2.1/graphics-vertex-array )
+* Double buffered rendering (put rendering on its own thread)
+
+sf::View (used to implement scrolling behavoiur)
+
+* FIring and moving adds additional velocity??
+
+[Button]
+* add HandleEvent function... to Button class (accept sf::Event -> Check for Mouse Button released...)
+
+
+
+States:
+* SplashState
+* IntroState
+* LoadingState
+
+Thoughts:
+* World Class contains sf::Vector2u for windowsize, sf::RectangleShape for bounds??
+
+* Create a GUI Class (put in different states...)
+
+Changes:
+* Rename Bullet to Projectile?
+* Put functions for loading fonts/textures (in Game.cpp) and place them in a LoadingState or SplashState
+
+
+APPLICATION TURNED ON:
+	Loading screen (setup / init things on another thread?)
+
+
+ 
+GUIInterface class
+
+ResourceManager<std::string, GUIInterface> 
+loadFromFile();
+
+
+[Renderer]
+
+
+
+
+
+
+
+[AVOID]
+	* Avoid fetching from JSON in 'Init()' methods if object is something like a boss or enemy... [takes time..]
+
+
+[Alternative Design]
+
+	Weapon:
+		* Weapon class has a reference to a BulletFactory, in its shoot function it ask the factory to create a bullet.
+		  Later it passes the bullet to an EntityManager (that is a singleton)...
+
+  	CollisionManager:
+		* rebuild with function for ProcessRemovals()??
+
+	Handling Entities:
+		* EnemySpawner handles enemies (updating/removing)
+		* Level handles enemies?
+
+	Player/Aircraft:
+		* Player contains an Aircraft class..
+
+
+
+
+
+

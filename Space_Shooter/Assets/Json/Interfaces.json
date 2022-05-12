@@ -1,0 +1,819 @@
+{
+  "title": {
+    "images": [
+      {
+        "name": "Background_Color",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 10.0,
+          "y": 10.0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "string": "Made by",
+        "font": "fun_font",
+        "font_size": 50,
+        "style": 0,
+        "position": {
+          "x": 512.0,
+          "y": 200.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 232,
+          "green": 235,
+          "blue": 54,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Henrik Jangefelt",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 0,
+        "position": {
+          "x": 512.0,
+          "y": 275.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 232,
+          "green": 235,
+          "blue": 54,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "(SFML / C++)",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 0,
+        "position": {
+          "x": 512.0,
+          "y": 475.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 232,
+          "green": 235,
+          "blue": 54,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ]
+  },
+  "main_menu": {
+    "images": [
+      {
+        "name": "Nebula",
+        "position": {
+          "x": 45.0,
+          "y": 50.0
+        },
+        "scale": {
+          "x": 4.0,
+          "y": 2.0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "string": "Mars Attacks!",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 0,
+        "position": {
+          "x": 512.0,
+          "y": 100.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 65,
+          "green": 235,
+          "blue": 115,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "They came from outer space",
+        "font": "fun_font",
+        "font_size": 25,
+        "style": 0,
+        "position": {
+          "x": 512.0,
+          "y": 175.0
+        },
+        "rotation": 0.0,
+        "color": {
+          "red": 65,
+          "green": 235,
+          "blue": 115,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "string": "Play",
+        "action": 0,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 270.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "text_hover_color": {
+          "red": 255,
+          "green": 255,
+          "blue": 255,
+          "alpha": 255
+        },
+        "background_color": {
+          "red": 40,
+          "green": 170,
+          "blue": 163,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Level Select",
+        "action": 1,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 360.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 170,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Settings",
+        "action": 2,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 450.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 170,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Quit",
+        "action": 3,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 540.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 170,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ]
+  },
+  "pause": {
+    "images": [
+    ],
+    "texts": [
+      {
+        "string": "Paused",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 2,
+        "position": {
+          "x": 512.0,
+          "y": 150.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 65,
+          "green": 235,
+          "blue": 115,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "string": "Continue",
+        "action": 0,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 310.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Main menu",
+        "action": 1,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 410.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ]
+  },
+  "level_select": {
+    "images": [
+    ],
+    "texts": [
+      {
+        "string": "Level Selection",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 2,
+        "position": {
+          "x": 512.0,
+          "y": 75.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 65,
+          "green": 235,
+          "blue": 115,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "string": "Return",
+        "action": 0,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 475.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Level: One",
+        "action": 1,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 200.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Level: Two",
+        "action": 2,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 280.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Level: Three",
+        "action": 3,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 360.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ]
+  },
+  "settings": {
+    "images": [
+    ],
+    "texts": [
+      {
+        "string": "Settings",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 2,
+        "position": {
+          "x": 512.0,
+          "y": 100.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 65,
+          "green": 235,
+          "blue": 115,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "string": "SD",
+        "action": 0,
+        "font": "fun_font",
+        "font_size": 36,
+        "position": {
+          "x": 400.0,
+          "y": 250.0
+        },
+        "size": {
+          "width": 100.0,
+          "height": 74.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "HD",
+        "action": 1,
+        "font": "fun_font",
+        "font_size": 36,
+        "position": {
+          "x": 600.0,
+          "y": 250.0
+        },
+        "size": {
+          "width": 100.0,
+          "height": 75.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Continue",
+        "action": 2,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 510.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ]
+  },
+  "game_over": {
+    "images": [
+    ],
+    "texts": [
+      {
+        "string": "Game Over",
+        "font": "fun_font",
+        "font_size": 80,
+        "style": 2,
+        "position": {
+          "x": 512.0,
+          "y": 150.0
+        },
+        "rotation": 0.0,
+        "size": {
+          "width": 200,
+          "height": 150
+        },
+        "color": {
+          "red": 65,
+          "green": 235,
+          "blue": 115,
+          "alpha": 255
+        },
+        "border_thickness": 5.8,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "string": "Restart",
+        "action": 0,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 310.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      },
+      {
+        "string": "Main Menu",
+        "action": 1,
+        "font": "fun_font",
+        "font_size": 40,
+        "position": {
+          "x": 512.0,
+          "y": 410.0
+        },
+        "size": {
+          "width": 350.0,
+          "height": 70.0
+        },
+        "background_color": {
+          "red": 40,
+          "green": 70,
+          "blue": 163,
+          "alpha": 255
+        },
+        "text_color": {
+          "red": 30,
+          "green": 30,
+          "blue": 30,
+          "alpha": 255
+        },
+        "border_thickness": 3.5,
+        "border_color": {
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 255
+        }
+      }
+    ]
+  }
+}
