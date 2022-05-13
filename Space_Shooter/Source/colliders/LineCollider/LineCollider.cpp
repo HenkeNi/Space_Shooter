@@ -34,7 +34,7 @@ bool LineCollider::IsColliding(const BoxCollider& aBoxCollider)			const
 
 bool LineCollider::IsColliding(const CircleCollider& aCircleCollider)	const
 {
-	return CU::IntersectionLineVsCircle(m_line, aCircleCollider.GetPrimitive());
+	return CU::IntersectionCircleVsLine(aCircleCollider.GetPrimitive(), m_line);
 }
 
 bool LineCollider::IsColliding(const LineCollider& aLineCollider)		const

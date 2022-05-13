@@ -61,7 +61,7 @@ bool CircleCollider::IsColliding(const CircleCollider& aCircleCollider)		const
 
 bool CircleCollider::IsColliding(const LineCollider& aLineCollider)			const
 {
-	return CU::IntersectionLineVsCircle(aLineCollider.GetPrimitive(), m_circle);
+	return CU::IntersectionCircleVsLine(m_circle, aLineCollider.GetPrimitive());
 }
 
 const CU::Circle<float>& CircleCollider::GetPrimitive()						const

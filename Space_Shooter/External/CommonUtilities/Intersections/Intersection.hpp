@@ -11,6 +11,8 @@ namespace CommonUtilities
 	/*										2D - Intersections   									   */
 	/***************************************************************************************************/
 
+#pragma region INTERSECTIONS_2D
+
 	/* ----------------------------- AABB2D vs AABB2D ---------------------------- */
 	template <typename T>
 	bool IntersectionAABB2DVsAABB2D(const AABB2D<T>& aAABB2D1, const AABB2D<T>& aAABB2D2)
@@ -32,28 +34,13 @@ namespace CommonUtilities
 		float deltaY = aCircle.GetCenterPosition().y - std::max(aAABB.GetMinPoint().y, std::min(aCircle.GetCenterPosition().y, aAABB.GetMaxPoint().y));
 
 		return ((deltaX * deltaX) + (deltaY * deltaY)) < (aCircle.GetRadius() * aCircle.GetRadius());
-
-		/* https://www.youtube.com/watch?v=D2a5fHX-Qrs */
-
-		/*CU::Vector2<float> aabbHalfSize = { aAABB.GetWidth() * 0.5f, aAABB.GetHeight() * 0.5f };
-		CU::Vector2<float> difference	= aCircle.GetCenterPosition() - aAABB.GetCenter();
-
-		float clampedX = Clamp<float>(difference.x, -aabbHalfSize, aabbHalfSize);
-
-		CU::Vector2<float> clamped = Clamp<CU::Vector2<float>>(difference, CU::Vector2<float>{ -aabbHalfSize.x, -aabbHalfSize.y }, aabbHalfSize);
-
-		CU::Vector2<float> closest = aAABB.GetCenter() + clamped;
-		difference = closest - aCircle.GetCenterPosition();
-
-		return difference.Length() < aCircle.GetRadius();*/
-		//return false;
 	}
 
-	/* ----------------------------- AABB2D vs Line ------------------------------ */
+	/* ----------------------------- AABB2D vs Point ----------------------------- */
 	template <typename T>
-	bool IntersectionAABB2DVsLine(const AABB2D<T>& aAABB, const Line<T>& aLine)
+	bool IntersectionAABB2DVsPoint(const AABB2D<T>& aAABB, const Vector2<T>& aPoint)
 	{
-		return false;
+		return aAABB.IsInside(aPoint);
 	}
 
 	/* ----------------------------- Circle vs Circle ---------------------------- */
@@ -66,9 +53,20 @@ namespace CommonUtilities
 		return length <= aCircle1.GetRadius() + aCircle2.GetRadius();
 	}
 
-	/* ----------------------------- Line vs Circle ------------------------------ */
+
+
+
+
+	/* ----------------------------- Circle vs Line ------------------------------ */
 	template <typename T>
-	bool IntersectionLineVsCircle(const Line<T>& aLine, const Circle<T>& aCircle)
+	bool IntersectionCircleVsLine(const Circle<T>& aCircle, const Line<T>& aLine)
+	{
+		return false;
+	}
+
+	/* ----------------------------- AABB2D vs Line ------------------------------ */
+	template <typename T>
+	bool IntersectionAABB2DVsLine(const AABB2D<T>& aAABB, const Line<T>& aLine)
 	{
 		return false;
 	}
@@ -80,17 +78,15 @@ namespace CommonUtilities
 		return false;
 	}
 
-	/* ----------------------------- Point vs AABB2D ----------------------------- */
-	template <typename T>
-	bool IntersectionPointVsAABB2D(const Vector2<T>& aPoint, const AABB2D<T>& aAABB)
-	{
-		return aAABB.IsInside(aPoint);
-	}
+	// TODO: RAY? z == 0.f..
 
+#pragma endregion INTERSECTIONS_2D
 
 	/***************************************************************************************************/
 	/*										3D - Intersections   									   */
 	/***************************************************************************************************/
+
+#pragma region INTERSECTIONS_3D
 
 	/* ----------------------------- AABB3D vs AABB3D ---------------------------- */
 	template <typename T>
@@ -232,4 +228,5 @@ namespace CommonUtilities
 
 	}
 
+#pragma endregion INTERSECTIONS_3D
 }
