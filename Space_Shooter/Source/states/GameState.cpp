@@ -113,13 +113,13 @@ void GameState::RegisterLevels()
 	auto level2 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, *m_player, 2);
 	auto level3 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, *m_player, 3);
 	
-	Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, level1.get());
+	/*Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, level1.get());
 	Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, level2.get());
 	Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, level3.get());
 
 	Dispatcher::GetInstance().Subscribe(eEvent::EnemyDeath, level1.get());
 	Dispatcher::GetInstance().Subscribe(eEvent::EnemyDeath, level2.get());
-	Dispatcher::GetInstance().Subscribe(eEvent::EnemyDeath, level3.get());
+	Dispatcher::GetInstance().Subscribe(eEvent::EnemyDeath, level3.get());*/
 
 	GetContext().m_levelManager.RegisterLevel(std::move(level1));
 	GetContext().m_levelManager.RegisterLevel(std::move(level2));

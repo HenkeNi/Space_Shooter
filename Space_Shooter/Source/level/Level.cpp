@@ -14,6 +14,13 @@ Level::Level(BulletSpawner& aBulletSpawner, EnemySpawner& aEnemySpawner, Player&
 	: m_bulletSpawner{ aBulletSpawner }, m_enemySpawner{ aEnemySpawner }, m_player{ aPlayer }, m_levelIndex{ GenerateId() }, m_gameIsOver{ false }, m_enemiesDefeated{ 0 }
 {
 	Init();
+
+}
+
+Level::~Level()
+{
+	Dispatcher::GetInstance().Unsubscribe(eEvent::PlayerDeath, this);
+	Dispatcher::GetInstance().Unsubscribe(eEvent::EnemyDeath, this);
 }
 
 void Level::Recieve(const Event& aEvent)
@@ -85,7 +92,8 @@ unsigned Level::GenerateId() const
 
 void Level::Init()
 {
-
+	Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, this);
+	Dispatcher::GetInstance().Subscribe(eEvent::EnemyDeath,  this);
 
 	//Dispatcher::GetInstance().Subscribe(eEvent::PlayerFire, &m_bulletSpawner);
 

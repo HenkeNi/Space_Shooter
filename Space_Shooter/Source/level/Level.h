@@ -11,6 +11,7 @@ class Level : public Subscriber
 {
 public:
 	Level(BulletSpawner& aBulletSpawner, EnemySpawner& aEnemySpawner, Player& aPlayer, int aLevel);
+	~Level();
 
 	virtual void	Recieve(const Event& aEvent)	override;
 
