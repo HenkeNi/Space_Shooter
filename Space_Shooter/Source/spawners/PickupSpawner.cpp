@@ -16,7 +16,7 @@ PickupSpawner::PickupSpawner(PickupFactory& aPickupFactory)
 
 PickupSpawner::~PickupSpawner()
 {
-	Dispatcher::GetInstance().Subscribe(eEvent::EnemyDeath, this);
+	Dispatcher::GetInstance().Unsubscribe(eEvent::EnemyDeath, this);
 }
 
 void PickupSpawner::Recieve(const Event& aEvent)
