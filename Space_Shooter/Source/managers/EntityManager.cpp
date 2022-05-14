@@ -100,6 +100,7 @@ void EntityManager::CancelSubscriptions()
 	Dispatcher::GetInstance().Unsubscribe(eEvent::EnemyCreated, this);
 	Dispatcher::GetInstance().Unsubscribe(eEvent::PlayerCreated, this);
 	Dispatcher::GetInstance().Unsubscribe(eEvent::PickupCreated, this);
+	Dispatcher::GetInstance().Unsubscribe(eEvent::PlayerDeath, this);
 }
 
 void EntityManager::UpdateEntities(float aDeltaTime)
