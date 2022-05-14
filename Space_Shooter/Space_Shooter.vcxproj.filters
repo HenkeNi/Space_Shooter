@@ -353,16 +353,16 @@
     <ClInclude Include="External\CommonUtilities\Utility\UtilityFunctions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector4.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Vectors\Vector4.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Vectors\Vector.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector2.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Vectors\Vector2.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Math\Vector\Vector3.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Vectors\Vector3.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="External\CommonUtilities\Volumes\Sphere.hpp">
@@ -380,13 +380,13 @@
     <ClInclude Include="External\CommonUtilities\Intersections\Intersection.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Volumes\Line.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Lines\Line.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Volumes\Plane.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Planes\Plane.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\Volumes\Ray.hpp">
+    <ClInclude Include="External\CommonUtilities\Math\Lines\Ray.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\colliders\BoxCollider\BoxCollider.h">
@@ -450,6 +450,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="External\CommonUtilities\Volumes\Volumes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\Volumes\OBB2D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\Math\Lines\Segment.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
