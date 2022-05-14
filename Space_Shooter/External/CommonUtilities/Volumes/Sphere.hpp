@@ -1,12 +1,13 @@
 #pragma once
 #include "Vector.hpp"
 
+/* - Sphere [defined by a center position and a radius] - */
+
 namespace CommonUtilities
 {
 	template <class T>
 	class Ray;
 
-	/* - Sphere [defined by a center position and a radius] - */
 	template <typename T>
 	class Sphere
 	{

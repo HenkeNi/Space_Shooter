@@ -1,6 +1,8 @@
 #pragma once
 #include "Vector.hpp"
 
+/* - Axis-Aligned Bounding Box (3D) - */
+
 namespace CommonUtilities
 {
 	template <typename T>

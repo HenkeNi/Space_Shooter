@@ -3,9 +3,10 @@
 #include "Vector.hpp"
 #include <vector>
 
+/* - Description: LineVolume represents a convex polygon (square, triangle) - */
+
 namespace CommonUtilities
 {
-	/* - LineVolume represents a convex polygon (square, triangle) - */
 	template <typename T>
 	class LineVolume
 	{

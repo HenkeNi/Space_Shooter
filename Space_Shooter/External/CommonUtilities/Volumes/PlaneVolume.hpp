@@ -3,10 +3,10 @@
 #include "Vector.hpp"
 #include <vector>
 
+/* - Description: A PlaneVolume object represents a convex polyhedron (quad, pyramid, etc.) - */
 
 namespace CommonUtilities
 {
-	/* - A PlaneVolume object represents a convex polyhedron (quad, pyramid, etc.) - */
 	template <typename T>
 	class PlaneVolume
 	{
