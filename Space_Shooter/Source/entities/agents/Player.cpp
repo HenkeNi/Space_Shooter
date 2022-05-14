@@ -151,8 +151,9 @@ void Player::HandleInput()
 			m_velocity = { 0.f, 0.f };
 		}
 
-		if (m_velocity.x > 0.f || m_velocity.y > 0.f)
+		if (abs(m_velocity.x) > 0.f || abs(m_velocity.y) > 0.f)
 		{
+			m_velocity.Normalize();
 			// Normalize and scale with speed..?!
 		}
 	}
