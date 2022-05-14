@@ -9,6 +9,8 @@ AudioManager::AudioManager()
 
 AudioManager::~AudioManager()
 {
+	Dispatcher::GetInstance().Unsubscribe(eEvent::PlayerDeath, this);
+	Dispatcher::GetInstance().Unsubscribe(eEvent::EnemyDeath, this);
 }
 
 void AudioManager::Init()
