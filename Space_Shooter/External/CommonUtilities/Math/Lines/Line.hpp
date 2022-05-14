@@ -1,6 +1,8 @@
 #pragma once
 #include "Vector.hpp"
 
+/* - Description: a Line object is represented by a directed infinite line - */
+
 namespace CommonUtilities
 {
 	template <typename T>
@@ -16,7 +18,7 @@ namespace CommonUtilities
 
 		const Vector2<T>	GetPoint()		const;
 		const Vector2<T>	GetDirection()	const;
-
+	
 	private:
 		Vector2<T>			myPoint;
 		Vector2<T>			myDirection;

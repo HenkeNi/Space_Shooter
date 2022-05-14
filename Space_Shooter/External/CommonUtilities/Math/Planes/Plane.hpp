@@ -1,9 +1,10 @@
 #pragma once
 #include "Vector.hpp"
 
+/* - Description:  A Plane object represents a plane with a direction (it has a normal that defines a side as outside, and one as inside) - */
+
 namespace CommonUtilities
 {
-	/* - A Plane represents a plane with a direction, it has a normal that defines a side as outside (and one as inside) - */
 	template <typename T>
 	class Plane
 	{

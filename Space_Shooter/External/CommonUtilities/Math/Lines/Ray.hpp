@@ -1,6 +1,8 @@
 #pragma once
 #include "Vector.hpp"
 
+/* - Description: a ray is defined by a point of origin and a direction. Similar to a Line, but is only infinite in one direction - */
+
 namespace CommonUtilities
 {
 	template <typename T>
