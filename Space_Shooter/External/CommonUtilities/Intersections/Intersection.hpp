@@ -15,15 +15,22 @@ namespace CommonUtilities
 
 	/* ----------------------------- AABB2D vs AABB2D ---------------------------- */
 	template <typename T>
-	bool IntersectionAABB2DVsAABB2D(const AABB2D<T>& aAABB2D1, const AABB2D<T>& aAABB2D2)
+	bool IntersectionAABB2DVsAABB2D(const AABB2D<T>& aAABB1, const AABB2D<T>& aAABB2)
 	{
-		if (aAABB2D1.GetMaxPoint().x < aAABB2D2.GetMinPoint().x) { return false; }
-		if (aAABB2D1.GetMaxPoint().y < aAABB2D2.GetMinPoint().y) { return false; }
+		if (aAABB1.GetMaxPoint().x < aAABB2.GetMinPoint().x) { return false; }
+		if (aAABB1.GetMaxPoint().y < aAABB2.GetMinPoint().y) { return false; }
 
-		if (aAABB2D1.GetMinPoint().x > aAABB2D2.GetMaxPoint().x) { return false; }
-		if (aAABB2D1.GetMinPoint().y > aAABB2D2.GetMaxPoint().y) { return false; }
+		if (aAABB1.GetMinPoint().x > aAABB2.GetMaxPoint().x) { return false; }
+		if (aAABB1.GetMinPoint().y > aAABB2.GetMaxPoint().y) { return false; }
 
 		return true;
+	}
+
+	/* ----------------------------- AABB2D vs AABB2 Sweap ----------------------- */
+	template <typename T>
+	bool IntersectionAABB2DVsAABB2DSweap(const AABB2D<T>& aAABB1, const AABB2D<T>& aAABB2, const Vector2<float>& aVelocity)
+	{
+		return false;
 	}
 
 	/* ----------------------------- AABB2D vs Circle ---------------------------- */
