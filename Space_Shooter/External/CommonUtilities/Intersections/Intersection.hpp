@@ -26,13 +26,6 @@ namespace CommonUtilities
 		return true;
 	}
 
-	/* ----------------------------- AABB2D vs AABB2 Sweap ----------------------- */
-	template <typename T>
-	bool IntersectionAABB2DVsAABB2DSweap(const AABB2D<T>& aAABB1, const AABB2D<T>& aAABB2, const Vector2<float>& aVelocity)
-	{
-		return false;
-	}
-
 	/* ----------------------------- AABB2D vs Circle ---------------------------- */
 	template <typename T>
 	bool IntersectionAABB2DVsCircle(const AABB2D<T>& aAABB, const Circle<T>& aCircle)
@@ -57,12 +50,17 @@ namespace CommonUtilities
 		Vector2<T> distance = (aCircle2.GetCenterPosition() - aCircle1.GetCenterPosition());
 		float length = distance.LengthSqr();
 
-		return length <= aCircle1.GetRadius() + aCircle2.GetRadius();
+		return length <= (aCircle1.GetRadius() + aCircle2.GetRadius()) * (aCircle1.GetRadius() + aCircle2.GetRadius());
 	}
 
 
 
-
+	/* ----------------------------- AABB2D vs AABB2 Sweap ----------------------- */
+	template <typename T>
+	bool IntersectionAABB2DVsAABB2DSweap(const AABB2D<T>& aAABB1, const AABB2D<T>& aAABB2, const Vector2<float>& aVelocity)
+	{
+		return false;
+	}
 
 	/* ----------------------------- Circle vs Line ------------------------------ */
 	template <typename T>
