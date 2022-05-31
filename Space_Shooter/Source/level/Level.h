@@ -6,11 +6,12 @@
 class Player;
 class BulletSpawner;
 class EnemySpawner;
+class ObstacleSpawner;
 
 class Level : public Subscriber
 {
 public:
-	Level(BulletSpawner& aBulletSpawner, EnemySpawner& aEnemySpawner, Player& aPlayer, int aLevel);
+	Level(BulletSpawner& aBulletSpawner, EnemySpawner& aEnemySpawner, ObstacleSpawner& aObstacleSpawner, Player& aPlayer, int aLevel);
 	~Level();
 
 	virtual void	Recieve(const Event& aEvent)	override;
@@ -30,9 +31,10 @@ private:
 	bool IsLevelComplete() const;
 
 	/* - Members - */
-	BulletSpawner&	m_bulletSpawner; // NEEDED HERE??
-	EnemySpawner&	m_enemySpawner;
-	Player&			m_player;
+	BulletSpawner&		m_bulletSpawner; // NEEDED HERE??
+	EnemySpawner&		m_enemySpawner;
+	ObstacleSpawner&	m_obstacleSpawner;
+	Player&				m_player;
 	//Label			m_currentLevelNotify; // Make notify class? Dispalay? Pop-up class?
 
 	// PickupSpawner
@@ -45,6 +47,8 @@ private:
 	//	Label			m_levelText;
 	unsigned 		m_levelIndex;
 	bool			m_gameIsOver;
+
+	sf::Clock		m_spawnTimer;
 	
 	//Player&					m_player;
 	//Enemy&					m_enemy;

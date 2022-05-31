@@ -5,13 +5,14 @@
 #include "Dispatcher.h"
 #include "UtilityFunctions.hpp"
 
+#include "ObstacleSpawner.h"
 #include "Player.h"
 
 namespace CU = CommonUtilities;
 
 
-Level::Level(BulletSpawner& aBulletSpawner, EnemySpawner& aEnemySpawner, Player& aPlayer, int aLevel)
-	: m_bulletSpawner{ aBulletSpawner }, m_enemySpawner{ aEnemySpawner }, m_player{ aPlayer }, m_levelIndex{ GenerateId() }, m_gameIsOver{ false }, m_enemiesDefeated{ 0 }
+Level::Level(BulletSpawner& aBulletSpawner, EnemySpawner& aEnemySpawner, ObstacleSpawner& aObstacleSpawner, Player& aPlayer, int aLevel)
+	: m_bulletSpawner{ aBulletSpawner }, m_enemySpawner{ aEnemySpawner }, m_obstacleSpawner{ aObstacleSpawner }, m_player{ aPlayer }, m_levelIndex{ GenerateId() }, m_gameIsOver{ false }, m_enemiesDefeated{ 0 }
 {
 	Init();
 
@@ -50,11 +51,11 @@ bool Level::Update(float aDeltaTime)
 	}
 
 
-	//if (m_spawnTimer.getElapsedTime().asSeconds() > 0.1f)// m_spawnDelay)
-	//{
-	//	SpawnEnemies();
-	//	m_spawnTimer.restart();		
-	//}
+	if (m_spawnTimer.getElapsedTime().asSeconds() > 0.01f)// m_spawnDelay)
+	{
+		//SpawnEnemies();
+		m_spawnTimer.restart();		
+	}
 	//return IsLevelComplete();
 	return m_gameIsOver;
 }
@@ -64,7 +65,6 @@ void Level::Render(sf::RenderTarget& aTarget) const
 	// Render background...
 	//m_levelText.Render();
 }
-
 
 void Level::OnStart()
 {
@@ -76,10 +76,9 @@ void Level::OnStart()
 	//m_player.Respawn();
 
 
-	m_enemySpawner.SpawnBoss({ 200.f, 200.f });
-
-	//m_enemySpawner.SpawnEnemy({ 200.5f, 200.5f });
-
+	//m_enemySpawner.SpawnBoss({ 200.f, 200.f });
+	m_obstacleSpawner.SpawnObstacle();
+	//m_enemySpawner.SpawnEnemy({ 400.5f, 100.5f });
 
 
 }
