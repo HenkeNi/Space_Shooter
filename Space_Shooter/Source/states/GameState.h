@@ -7,6 +7,8 @@
 #include "EnemySpawner.h"
 #include "PickupSpawner.h"
 #include "PickupFactory.h"
+#include "ObstacleFactory.h"
+#include "ObstacleSpawner.h"
 #include "EntityManager.h"
 #include "HUD.h"
 #include "Player.h"
@@ -40,6 +42,10 @@ private:
 	EnemySpawner		m_enemySpawner;
 	EntityManager		m_entityManager;
 	HUD					m_HUD;
+	
+	ObstacleFactory m_obstacleFactory;
+	ObstacleSpawner m_obstacleSpawner;  // Combine with enemies??
+
 	Player*				m_player;
 	PickupFactory		m_pickupFactory;
 	PickupSpawner		m_pickupSpawner;

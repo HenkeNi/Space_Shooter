@@ -13,7 +13,9 @@ GameState::GameState(SharedContext aSharedContext)
 	  m_bulletSpawner{ m_bulletFactory },
 	  m_enemySpawner{ m_agentFactory },
 	  m_pickupFactory{ aSharedContext, m_colliderFactory },
-	  m_pickupSpawner{ m_pickupFactory }
+	  m_pickupSpawner{ m_pickupFactory },
+	  m_obstacleFactory{ aSharedContext, m_colliderFactory },
+	 m_obstacleSpawner{ m_obstacleFactory }
 {
 	Init();
 	RegisterLevels();
@@ -92,6 +94,7 @@ void GameState::Init()
 	m_agentFactory.Init();
 	m_bulletFactory.Init();
 	m_pickupFactory.Init();
+	m_obstacleFactory.Init();
 
 	m_player = m_agentFactory.CreatePlayer(1);
 
@@ -109,9 +112,9 @@ void GameState::RegisterLevels()
 {
 	// TODO: Load data from JSON??
 
-	auto level1 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, *m_player, 1);
-	auto level2 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, *m_player, 2);
-	auto level3 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, *m_player, 3);
+	auto level1 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, m_obstacleSpawner, *m_player, 1);
+	auto level2 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, m_obstacleSpawner, *m_player, 2);
+	auto level3 = std::make_unique<Level>(m_bulletSpawner, m_enemySpawner, m_obstacleSpawner, *m_player, 3);
 	
 	/*Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, level1.get());
 	Dispatcher::GetInstance().Subscribe(eEvent::PlayerDeath, level2.get());
