@@ -1,0 +1,18 @@
+{
+  "obstacles": [
+    {
+      "id": 0,
+      "identifier": "Asteroid_Large",
+      "radius": 6.5,
+      "movement_speed": 12.5,
+      "texture": "Asteroid_Big_Brown"
+    },
+    {
+      "id": 1,
+      "identifier": "BlackHole",
+      "radius": 6.5,
+      "movement_speed": 12.5,
+      "texture": "Asteroid_Big_Brown"
+    }
+  ]
+}
