@@ -90,7 +90,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;src/pch;%(AdditionalIncludeDirectories);src/pch</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source\entities\obstacles;External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;src/pch;%(AdditionalIncludeDirectories);src/pch</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;;src/pch</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source\entities\obstacles;External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;;src/pch</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -128,7 +128,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;src/pch;%(AdditionalIncludeDirectories);src/pch</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source\entities\obstacles;External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;src/pch;%(AdditionalIncludeDirectories);src/pch</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -146,7 +146,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;;src/pch</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source\entities\obstacles;External\CommonUtilities\Math\Planes;External\CommonUtilities\Math\Lines;Source\map;Source\effects;External\CommonUtilities\Utility;Source\pch;External\CommonUtilities\Intersections;External\CommonUtilities\Math\Vectors;External\CommonUtilities\Volumes;Source\Colliders\CollisionObject;Source\Colliders\LineCollider;Source\Colliders\CircleCollider;Source\Colliders\BoxCollider;Source\commands;Source\input;Source\entities\agents;Source\data;Source\entities;Source\enums;Source\hud;Source\communication\dispatcher;Source\communication\events;Source\communication\subscribers;Source\spawners;Source\level;Source\shared;Source\fsm;Source\gui;Source\window;Source\;Source\utility;Source\objects\game;Source\objects;Source\factories;Source\json;$(SolutionDir)Space_Shooter\External\rapidjson;Source\states;Source\managers;$(SolutionDir)Space_Shooter\External\SFML\include;;src/pch</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -159,7 +159,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\spawners\ObstacleSpawner.cpp" />
+    <ClCompile Include="Source\entities\obstacles\BlackHole.cpp" />
     <ClCompile Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Quadtree\Quadtree.cpp" />
+    <ClCompile Include="External\CommonUtilities\DataStructures\Linear\Grid\Grid.cpp" />
     <ClCompile Include="Source\effects\Effects.cpp" />
     <ClCompile Include="Source\systems\ParticleSystem.cpp" />
     <ClCompile Include="Source\factories\ObstacleFactory.cpp" />
@@ -169,7 +172,7 @@
     <ClCompile Include="Source\colliders\LineCollider\LineCollider.cpp" />
     <ClCompile Include="Source\colliders\CircleCollider\CircleCollider.cpp" />
     <ClCompile Include="Source\colliders\BoxCollider\BoxCollider.cpp" />
-    <ClCompile Include="Source\entities\Asteroid.cpp" />
+    <ClCompile Include="Source\entities\obstacles\Asteroid.cpp" />
     <ClCompile Include="Source\spawners\PickupSpawner.cpp" />
     <ClCompile Include="Source\commands\Commands.cpp" />
     <ClCompile Include="Source\spawners\EnemySpawner.cpp" />
@@ -219,17 +222,33 @@
     <ClCompile Include="Source\map\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\BSTSet.hpp" />
+    <ClInclude Include="Source\data\ObstacleData.h" />
+    <ClInclude Include="Source\spawners\ObstacleSpawner.h" />
+    <ClInclude Include="Source\entities\obstacles\BlackHole.h" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Array\CircularArray.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Grid\GridCell.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Linked-List\DoublyLinkedList.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Linked-List\DoublyLinkedListNode.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Queue\Queue.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Stack\Stack.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Hash-Map\HashMap.h" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\BSTSet\BSTSet.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Heap\Heap.hpp" />
     <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Quadtree\Quadtree.h" />
     <ClInclude Include="External\CommonUtilities\Math\Lines\Segment.hpp" />
+    <ClInclude Include="External\CommonUtilities\Time\Timer.hpp" />
+    <ClInclude Include="External\CommonUtilities\Utility\Mathf.hpp" />
+    <ClInclude Include="External\CommonUtilities\Utility\Sortings.hpp" />
     <ClInclude Include="External\CommonUtilities\Volumes\OBB2D.hpp" />
     <ClInclude Include="External\CommonUtilities\Volumes\Volumes.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Grid\Grid.h" />
     <ClInclude Include="Source\effects\Effects.h" />
     <ClInclude Include="External\CommonUtilities\Math\Matrices\Matrix3x3.hpp" />
     <ClInclude Include="External\CommonUtilities\Math\Matrices\Matrix4x4.hpp" />
     <ClInclude Include="External\CommonUtilities\Volumes\LineVolume.hpp" />
     <ClInclude Include="External\CommonUtilities\Volumes\PlaneVolume.hpp" />
     <ClInclude Include="Source\effects\Effect.h" />
+    <ClInclude Include="Source\enums\eButtonState.h" />
     <ClInclude Include="Source\enums\ePickupType.h" />
     <ClInclude Include="Source\systems\ParticleSystem.h" />
     <ClInclude Include="Source\factories\ObstacleFactory.h" />
@@ -240,7 +259,7 @@
     <ClInclude Include="Source\colliders\LineCollider\LineCollider.h" />
     <ClInclude Include="Source\colliders\CircleCollider\CircleCollider.h" />
     <ClInclude Include="Source\colliders\BoxCollider\BoxCollider.h" />
-    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\VectorOnStack.hpp" />
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Vector\VectorOnStack.hpp" />
     <ClInclude Include="External\CommonUtilities\Utility\UtilityFunctions.hpp" />
     <ClInclude Include="External\CommonUtilities\Math\Vectors\Vector.hpp" />
     <ClInclude Include="External\CommonUtilities\Math\Vectors\Vector2.hpp" />
@@ -255,7 +274,7 @@
     <ClInclude Include="External\CommonUtilities\Math\Lines\Ray.hpp" />
     <ClInclude Include="External\CommonUtilities\Volumes\Sphere.hpp" />
     <ClInclude Include="Source\colliders\CollisionObject\CollisionObject.h" />
-    <ClInclude Include="Source\entities\Asteroid.h" />
+    <ClInclude Include="Source\entities\obstacles\Asteroid.h" />
     <ClInclude Include="Source\enums\eCollisionLayer.h" />
     <ClInclude Include="Source\spawners\PickupSpawner.h" />
     <ClInclude Include="Source\commands\Commands.h" />
@@ -319,6 +338,7 @@
     <None Include="Assets\Json\Agents.json" />
     <None Include="Assets\Json\Interfaces.json" />
     <None Include="Assets\Json\Levels.json" />
+    <None Include="Assets\Json\Obstacles.json" />
     <None Include="Assets\Json\Pickups.json" />
     <None Include="Assets\Json\Settings.json" />
     <None Include="Assets\Json\Textures.json" />

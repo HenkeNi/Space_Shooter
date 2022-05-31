@@ -135,7 +135,7 @@
     <ClCompile Include="Source\spawners\PickupSpawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\entities\Asteroid.cpp">
+    <ClCompile Include="Source\entities\obstacles\Asteroid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\colliders\BoxCollider\BoxCollider.cpp">
@@ -172,6 +172,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\map\Tile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="External\CommonUtilities\DataStructures\Linear\Grid\Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\entities\obstacles\BlackHole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\spawners\ObstacleSpawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -338,7 +347,7 @@
     <ClInclude Include="Source\spawners\PickupSpawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\entities\Asteroid.h">
+    <ClInclude Include="Source\entities\obstacles\Asteroid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\enums\eCollisionLayer.h">
@@ -347,7 +356,7 @@
     <ClInclude Include="Source\colliders\CollisionObject\CollisionObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\VectorOnStack.hpp">
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Vector\VectorOnStack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="External\CommonUtilities\Utility\UtilityFunctions.hpp">
@@ -440,7 +449,7 @@
     <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Quadtree\Quadtree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\BSTSet.hpp">
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\BSTSet\BSTSet.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\map\Tilemap.h">
@@ -458,6 +467,54 @@
     <ClInclude Include="External\CommonUtilities\Math\Lines\Segment.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\enums\eButtonState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Grid\Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Grid\GridCell.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\Time\Timer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Stack\Stack.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\Utility\Sortings.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Queue\Queue.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\Utility\Mathf.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Linked-List\DoublyLinkedList.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Linked-List\DoublyLinkedListNode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Hash-Map\HashMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Non-Linear\Trees\Heap\Heap.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\CommonUtilities\DataStructures\Linear\Array\CircularArray.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\entities\obstacles\BlackHole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\spawners\ObstacleSpawner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\data\ObstacleData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Json\Settings.json" />
@@ -468,6 +525,7 @@
     <None Include="Assets\Json\Interfaces.json" />
     <None Include="Assets\Json\Pickups.json" />
     <None Include="Assets\Json\Textures.json" />
+    <None Include="Assets\Json\Obstacles.json" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Textures\Background_Space.png">
