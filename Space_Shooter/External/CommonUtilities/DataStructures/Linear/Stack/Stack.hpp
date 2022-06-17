@@ -2,6 +2,8 @@
 #include "../CommonUtilities/DataStructures/Iterators/StackIterator.hpp"
 #include <cassert>
 
+// TODO: use memcpy.. (useSafeMode)
+
 namespace CommonUtilities
 {
 	template <class T, bool Static = true, typename SizeType = unsigned int>
@@ -95,12 +97,15 @@ namespace CommonUtilities
 	template <class T, bool Static, typename SizeType>
 	void Stack<T, Static, SizeType>::Push(const T& aValue)
 	{
-		if (IsFull() && !Static)
+		if (IsFull())
 		{
-			Resize(myCapacity * 2);
-			myData[myTop++] = aValue;
+			if (Static)
+				assert(false && "Stack is full");
+			else
+				Resize(myCapacity * 2);
 		}
-		else if (!IsFull())
+
+		if (!IsFull())
 		{
 			myData[myTop++] = aValue;
 		}
@@ -111,7 +116,7 @@ namespace CommonUtilities
 	{
 		assert(!IsEmpty() && "Unable to Pop an empty structure!");
 
-		return myData[myTop--];
+		return myData[--myTop];
 	}
 	
 	template <class T, bool Static, typename SizeType>
