@@ -10,17 +10,17 @@ namespace CommonUtilities
 	public:
 		Vector4();
 		Vector4(const T& aX, const T& aY, const T& aZ, const T& aW);
-		Vector4(const Vector4&)											= default;
-		~Vector4()														= default;
+		Vector4(const Vector4&)					= default;
+		~Vector4()								= default;
 
-		Vector4& operator=(const Vector4&)								= default;
-		Vector4  operator-()												const;
+		Vector4& operator=(const Vector4&)		= default;
+		Vector4  operator-()						const;
 
 		/* -	Methods		- */
-		T			LengthSqr()											const;
-		T			Length()											const;
-		T			Dot(const Vector4 & aVector)						const;
-		Vector4		GetNormalized()										const;
+		T			LengthSqr()						const;
+		T			Length()						const;
+		T			Dot(const Vector4 & aVector)	const;
+		Vector4		GetNormalized()					const;
 		void		Normalize();
 
 		/* - Members -*/
@@ -30,7 +30,7 @@ namespace CommonUtilities
 		T w;
 	};
 
-#pragma region DEFINITIONS
+#pragma region METHOD_DEFINITIONS
 
 	template <class T>
 	Vector4<T>::Vector4()
@@ -65,8 +65,8 @@ namespace CommonUtilities
 	template <class T>
 	Vector4<T> Vector4<T>::GetNormalized() const
 	{
+		assert(Length() != 0);
 		auto length = 1 / Length();
-		assert(length != 0);
 
 		return { x * length, y * Length, z * Length, w * Length };
 	}
@@ -74,16 +74,19 @@ namespace CommonUtilities
 	template <class T>
 	void Vector4<T>::Normalize()
 	{
+		assert(Length() != 0);
+
 		auto length = 1 / Length();
-		assert(length != 0);
 		x *= length;
 		y *= length;
 		z *= length;
 		w *= length;
 	}
 
+#pragma endregion METHOD_DEFINITIONS
 
-	/* -		Overloaded Operators		 - */
+#pragma region OVERLOADED_OPERATORS
+
 	template <class T>
 	Vector4<T> Vector4<T>::operator-() const
 	{
@@ -161,5 +164,5 @@ namespace CommonUtilities
 		return !(aVector0 == aVector1);
 	}
 
-#pragma endregion DEFINITIONS
+#pragma endregion OVERLOADED_OPERATORS
 }
