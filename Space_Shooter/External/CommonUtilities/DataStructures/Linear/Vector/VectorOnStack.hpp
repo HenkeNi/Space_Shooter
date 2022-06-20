@@ -1,14 +1,18 @@
 #pragma once
+#include "../CommonUtilities/DataStructures/Iterators/VectorOnStackIterator.h"
 #include <cassert>
 #include <initializer_list>
 
-
-// TODO: Check (or Assert) size of parameter is not larger than Size of current..
+// TODO: empalce back!
 namespace CommonUtilities
 {
 	template <typename Type, int size, typename CounterType = unsigned short, bool useSafeModeFlag = true>
 	class VectorOnStack
 	{
+	public:
+		using ValueType = Type;
+		using Iterator = VectorOnStackIterator<VectorOnStack<Type, size, CounterType, useSafeModeFlag>>;
+
 	public:
 		VectorOnStack();
 		VectorOnStack(const VectorOnStack& aVectorOnStack);
@@ -29,10 +33,15 @@ namespace CommonUtilities
 		void			RemoveCyclicAtIndex(const CounterType anIndex);
 		void			Clear();
 
+		Iterator		begin();
+		Iterator		end();
+
 	private:
 		Type			m_data[size];
 		CounterType		m_counter;
 	};
+
+#pragma region METHOD_DEFINITIONS
 
 	template <typename Type, int size, typename CounterType , bool useSafeModeFlag>
 	VectorOnStack<Type, size, CounterType, useSafeModeFlag>::VectorOnStack()
@@ -168,7 +177,7 @@ namespace CommonUtilities
 	template <typename Type, int size, typename CounterType, bool useSafeModeFlag>
 	void VectorOnStack<Type, size, CounterType, useSafeModeFlag>::Insert(const CounterType anIndex, const Type& anObject)
 	{
-		assert(m_counter < size && anIndex >= 0 && anIndex < size&& anIndex < m_counter + 1);
+		assert(m_counter < size && anIndex >= 0 && anIndex < size && anIndex < m_counter + 1);
 		Type newData[size];
 		if (useSafeModeFlag)
 		{
@@ -237,4 +246,18 @@ namespace CommonUtilities
 	{
 		m_counter = 0;
 	}
+
+	template <typename Type, int size, typename CounterType, bool useSafeModeFlag>
+	VectorOnStackIterator<VectorOnStack<Type, size, CounterType, useSafeModeFlag>> VectorOnStack<Type, size, CounterType, useSafeModeFlag>::begin()
+	{
+		return Iterator(m_data);
+	}
+
+	template <typename Type, int size, typename CounterType, bool useSafeModeFlag>
+	VectorOnStackIterator<VectorOnStack<Type, size, CounterType, useSafeModeFlag>> VectorOnStack<Type, size, CounterType, useSafeModeFlag>::end()
+	{
+		return Iterator(m_data + m_counter);
+	}
+
+#pragma endregion METHOD_DEFINITIONS
 }
