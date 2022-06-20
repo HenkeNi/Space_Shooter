@@ -17,19 +17,22 @@ namespace CommonUtilities
 		Vector2		operator-()							const;
 
 		/* -	Methods		- */
-		T			LengthSqr()						const;
-		T			Length()						const;
-		T			Dot(const Vector2& another)		const;
-		Vector2		GetNormalized()					const;
-		void		Normalize();
+		T			LengthSqr()							const;
+		T			Length()							const;
+		T			Dot(const Vector2& another)			const;
+		T			DistanceTo(const Vector2& another)	const; 
+		T			AngleTo(const Vector2& another)		const; // TODO...
+		Vector2		DirectionTo(const Vector2& another) const; 
+		Vector2		GetNormalized()						const;
+		void		Normalize(); 
 
 		/* -	Members		- */
 		T x;
 		T y;
 	};
 
-#pragma region DEFINITIONS
-
+#pragma region METHOD_DEFINITIONS
+ 
 	template <class T>
 	Vector2<T>::Vector2()
 		: x{ 0 }, y{ 0 }
@@ -43,28 +46,48 @@ namespace CommonUtilities
 	}
 
 	template <class T>
-	T Vector2<T>::LengthSqr() const
+	T Vector2<T>::LengthSqr()							const
 	{
 		return (x * x) + (y * y);
 	}
 
 	template <class T>
-	T Vector2<T>::Length() const
+	T Vector2<T>::Length()								const
 	{
 		return std::sqrt((x * x) + (y * y));
 	}
 
 	template <class T>
-	T Vector2<T>::Dot(const Vector2<T>& another) const
+	T Vector2<T>::Dot(const Vector2<T>& another)		const
 	{
 		return (x * another.x) + (y * another.y);
 	}
 
 	template <class T>
-	Vector2<T> Vector2<T>::GetNormalized() const
+	T Vector2<T>::DistanceTo(const Vector2<T>& another)	const
 	{
+		Vector2<T> direction = { another.x - x, another.y - y };
+		return direction.Length();
+	}
+
+	template <class T>
+	T Vector2<T>::AngleTo(const Vector2& another)		const
+	{
+		return -1; // TODO..
+	}
+
+	template <class T>
+	Vector2<T> Vector2<T>::DirectionTo(const Vector2<T>& another) const
+	{
+		Vector2<T> direction = { another.x - x, another.y - y };
+		return direction.GetNormalized();
+	}
+
+	template <class T>
+	Vector2<T> Vector2<T>::GetNormalized()				const
+	{
+		assert(Length() != 0);
 		auto length = 1 / Length();
-		assert(length != 0.0);
 
 		return { x * length, y * length };
 	}
@@ -72,17 +95,19 @@ namespace CommonUtilities
 	template <class T>
 	void Vector2<T>::Normalize()
 	{
+		assert(Length() != 0);
 		auto length = 1 / Length();
-		assert(length != 0.0f);
 
 		x *= length;
 		y *= length;
 	}
 
+#pragma endregion METHOD_DEFINITIONS
 
-	/* -		Overloaded Operators		 - */
+#pragma region OVERLOADED_OPERATORS
+
 	template <class T>
-	Vector2<T> Vector2<T>::operator-()	const
+	Vector2<T> Vector2<T>::operator-()					const
 	{
 		return { -x, -y };
 	}
@@ -155,5 +180,5 @@ namespace CommonUtilities
 		return !(aVector0 == aVector1);
 	}
 
-#pragma endregion DEFINITIONS
+#pragma endregion OVERLOADED_OPERATORS
 } 

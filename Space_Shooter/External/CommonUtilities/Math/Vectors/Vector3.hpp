@@ -10,16 +10,18 @@ namespace CommonUtilities
 	public:
 		Vector3();
 		Vector3(const T& aX, const T& aY, const T& aZ);
-		Vector3(const Vector3&)							= default;
-		~Vector3()										= default;
+		Vector3(const Vector3&)						= default;
+		~Vector3()									= default;
 
-		Vector3& operator=(const Vector3&)				= default;
-		Vector3  operator-()								const;
+		Vector3& operator=(const Vector3&)			= default;
+		Vector3  operator-()							const;
 
 		/* -	Methods		- */
 		T			LengthSqr()							const;
 		T			Length()							const;
 		T			Dot(const Vector3& another)			const;
+		T			DistanceTo(const Vector3& another)	const;
+		Vector3		DirectionTo(const Vector3& another)	const;
 		Vector3		Cross(const Vector3& another)		const;
 		Vector3		GetNormalized()						const;
 		void		Normalize();
@@ -30,7 +32,7 @@ namespace CommonUtilities
 		T z;
 	};
 
-#pragma region DEFINITIONS
+#pragma region METHOD_DEFINITIONS
 
 	template <class T>
 	Vector3<T>::Vector3()
@@ -62,6 +64,20 @@ namespace CommonUtilities
 		return (x * another.x) + (y * another.y) + (z * another.z);
 	}
 
+	template<class T>
+	T Vector3<T>::DistanceTo(const Vector3& another) const
+	{
+		Vector3<T> direction = { another.x - x, another.y - y };
+		return direction.Length();
+	}
+
+	template<class T>
+	Vector3<T> Vector3<T>::DirectionTo(const Vector3& another) const
+	{
+		Vector3<T> direction = { another.x - x, another.y - y };
+		return direction.GetNormalized();
+	}
+
 	template <class T>
 	Vector3<T> Vector3<T>::Cross(const Vector3& another) const
 	{
@@ -71,8 +87,8 @@ namespace CommonUtilities
 	template <class T>
 	Vector3<T> Vector3<T>::GetNormalized() const
 	{
-		auto length = 1 / Length();
 		assert(Length() != 0);
+		auto length = 1 / Length();
 
 		return { x * length, y * length, z * length };
 	}
@@ -80,15 +96,18 @@ namespace CommonUtilities
 	template <class T>
 	void Vector3<T>::Normalize()
 	{
+		assert(Length() != 0);
+
 		auto length = 1 / Length();
-		assert(length != 0);
 		x *= length;
 		y *= length;
 		z *= length;
 	}
 
+#pragma endregion METHOD_DEFINITIONS
 
-	/* -		Overloaded Operators		 - */
+#pragma region OVERLOADED_OPERATORS
+
 	template <class T>
 	Vector3<T> Vector3<T>::operator-()	const
 	{
@@ -163,5 +182,5 @@ namespace CommonUtilities
 		return !(aVector0 == aVector1);
 	}
 
-#pragma endregion DEFINITIONS
+#pragma endregion OVERLOADED_OPERATORS
 }
